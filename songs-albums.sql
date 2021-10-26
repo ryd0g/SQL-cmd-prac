@@ -69,7 +69,7 @@ WHERE Albums.name = 1;
 
 SELECT year_published
 FROM Albums
-WHERE year_published > 1970 and < 1980
+WHERE year_published BETWEEN 1970 AND 1980
 
 /*
  * TODO: Find all songs on albums published between 1970 and 1980. 
@@ -78,7 +78,7 @@ WHERE year_published > 1970 and < 1980
  
  SELECT * FROM Songs
  JOIN Albums
- JOIN Albums ON Songs.name = Albums.year_published > 1970 and < 1980
+ JOIN Albums ON Songs.name = Albums.year_published BETWEEN 1970 and 1980
  WHERE Albums.name = 1;
 
 /*
